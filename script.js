@@ -93,8 +93,32 @@ function updateDOM() {
     createItemEl(onHoldList, 0, backlogitem, index);
   });
   // Run getSavedColumns only once, Update Local Storage
+  updatedOnLoad = true;
+  updateSavedColumns();
+}
 
-
+// Rebuil;ting arrays 
+function rebuildarray()
+{
+  console.log(backlogList.children);
+  console.log(progressList.children);
+  backlogListArray = [];
+  for (let i = 0; i < backlogList.children.length; i++) {
+    backlogListArray.push(backlogList.children[i].textContent);
+  }
+  progressListArray =[];
+  for (let i = 0; i < progressList.children.length; i++) {
+    progressListArray.push(progressList.children[i].textContent);
+  }
+  completeListArray = [];
+  for (let i = 0; i < completeList.children.length; i++) {
+    completeListArray.push(completeList.children[i].textContent);
+  }
+  onHoldListArray =[];
+  for (let i = 0; i < onHoldList.children.length; i++) {
+    onHoldListArray.push(onHoldList.children[i].textContent);
+  }
+  updateDOM();
 }
 function drag(event)
 {
@@ -117,6 +141,7 @@ function drop(e)
     });
   const parent  = ListColumns[currentColumn];
   parent.appendChild(draggedItem);
+  rebuildarray();
 }
 
 function dragEnter(column)
