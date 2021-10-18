@@ -59,6 +59,9 @@ function createItemEl(columnEl, column, item, index) {
   listEl.textContent = item;
   listEl.draggable =true;
   listEl.setAttribute('ondragstart' , 'drag(event)');
+  listEl.contentEditable = 'true';
+  listEl.id = index;
+  listEl.setAttribute('onfocusout' , `updateItem(${index} , ${column});`)
   // append
   columnEl.appendChild(listEl);
 }
@@ -80,21 +83,37 @@ function updateDOM() {
   // Progress Column
   progressList.textContent = "";
   progressListArray.forEach((backlogitem, index) => {
-    createItemEl(progressList, 0, backlogitem, index);
+    createItemEl(progressList, 1, backlogitem, index);
   });
   // Complete Column
   completeList.textContent = "";
   completeListArray.forEach((backlogitem, index) => {
-    createItemEl(completeList, 0, backlogitem, index);
+    createItemEl(completeList, 2, backlogitem, index);
   });
   // On Hold Column
   onHoldList.textContent = "";
   onHoldListArray.forEach((backlogitem, index) => {
-    createItemEl(onHoldList, 0, backlogitem, index);
+    createItemEl(onHoldList, 3, backlogitem, index);
   });
   // Run getSavedColumns only once, Update Local Storage
   updatedOnLoad = true;
   updateSavedColumns();
+}
+
+// update or delete value
+function updateItem(id , column)
+{
+  const selectedArray = listArrays[column];
+  const selectedColumnEl = ListColumns[column].children;
+  if(!selectedColumnEl[id].textContent)
+  {
+    delete selectedArray[id]; 
+    selectedArray.pop(id);
+  }
+  // console.log(selectedArray);
+ 
+  // console.log(selectedArray);
+  updateDOM();
 }
 
 function addtocolumn(column)
