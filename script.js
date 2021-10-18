@@ -97,6 +97,30 @@ function updateDOM() {
   updateSavedColumns();
 }
 
+function addtocolumn(column)
+{
+  const itemText = addItems[column].textContent;
+  const selectedArray = listArrays[column];
+  selectedArray.push(itemText);
+  addItems[column].textContent ='';
+  updateDOM();
+}
+
+// show input box
+function showinputbox(column)
+{
+  addBtns[column].style.visibility = 'hidden';
+  saveItemBtns[column].style.display = 'flex';
+  addItemContainers[column].style.display = 'flex';
+}
+// Hide input box
+function hideinputbox(column)
+{
+  addBtns[column].style.visibility = "visible";
+  saveItemBtns[column].style.display = "none";
+  addItemContainers[column].style.display = "none";
+  addtocolumn(column);
+}
 // Rebuil;ting arrays 
 function rebuildarray()
 {
