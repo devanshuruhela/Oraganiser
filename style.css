@@ -1,6 +1,5 @@
-/* Trees Image - Pexels: https://www.pexels.com/photo/photo-of-trees-in-forest-3801030/ */
-@import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 html {
   box-sizing: border-box;
 }
@@ -17,23 +16,37 @@ body {
   height: 100vh;
   width: 100vw;
   /* background: url("./trees.jpg"); */
-  background-color: rgba(95, 107, 243, 0.557);
+  background-color: #f6f7fb;
   background-size: cover;
   background-position: 50% 60%;
   background-attachment: fixed;
   color: white;
-  font-family: Quicksand, sans-serif;
+  font-family: 'Poppins',
+  sans-serif;
   overflow-y: hidden;
 }
 
 h1 {
   letter-spacing: 2px;
-  text-shadow: 2px 2px 5px black;
 }
 
 .main-title {
+  font-family: 'Dancing Script',
+  cursive;
+  padding: 20px;
+  background-color:#fff;
   text-align: center;
   font-size: 3rem;
+  color: #4583fa;
+  display: flex;
+  flex: start;
+  z-index: 1;
+  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.4);
+}
+.icon
+{
+  color: #4583fa; 
+  margin-right: 35vw;
 }
 
 ul {
@@ -44,6 +57,7 @@ ul {
 
 .drag-container {
   margin: 20px;
+  padding-top: 30px;
 }
 
 .drag-list {
@@ -56,9 +70,14 @@ ul {
   flex:1;
   margin: 0 10px;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color:#fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   overflow-x: hidden;
+}
+.drag-column:hover
+{
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.19);
 }
 
 .backlog-column .header,
@@ -163,12 +182,13 @@ ul {
   cursor: pointer;
   width: fit-content;
   border-radius: 5px;
+  color: gray;
   transition: all 0.3s ease-in;
   user-select: none;
 }
 
 .add-btn:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #4584fa49;
   color: black;
 }
 
