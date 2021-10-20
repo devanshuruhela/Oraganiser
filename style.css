@@ -5,21 +5,17 @@ html {
 }
 
 :root {
-  --column-1: #a2622d;
-  --column-2: #1b6161;
-  --column-3: #248224;
-  --column-4: #a22d22;
+  --column-1: #1A55FF;
+  --column-2: #6528FF;
+  --column-3: #1F222E;
+  --column-4: #181624;
 }
 
 body {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  /* background: url("./trees.jpg"); */
   background-color: #f6f7fb;
-  background-size: cover;
-  background-position: 50% 60%;
-  background-attachment: fixed;
   color: white;
   font-family: 'Poppins',
   sans-serif;
@@ -28,6 +24,11 @@ body {
 
 h1 {
   letter-spacing: 2px;
+  margin: 0;
+}
+h2 {
+  letter-spacing: 2px;
+  margin: 0.8rem;
 }
 
 .main-title {
@@ -82,29 +83,26 @@ ul {
 
 .backlog-column .header,
 .backlog-column .solid,
-.backlog-column .solid:hover,
-.backlog-column .over {
+.backlog-column .solid:hover{
   background-color: var(--column-1);
 }
 
 .progress-column .header,
 .progress-column .solid,
-.progress-column .solid:hover,
-.progress-column .over {
+.progress-column .solid:hover{
   background-color: var(--column-2);
 }
 
 .complete-column .header,
 .complete-column .solid,
-.complete-column .solid:hover,
-.complete-column .over {
+.complete-column .solid:hover
+{
   background-color: var(--column-3);
 }
 
 .on-hold-column .header,
 .on-hold-column .solid,
-.on-hold-column .solid:hover,
-.on-hold-column .over {
+.on-hold-column .solid:hover{
   background-color: var(--column-4);
 }
 
@@ -155,23 +153,25 @@ ul {
   margin: 10px;
   padding: 10px;
   height: fit-content;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #FFF;
   border-radius: 10px;
   line-height: 1.5rem;
   letter-spacing: 1px;
   cursor: pointer;
+  font-weight: bold;
+  color: #000;
+  outline: rgba(0, 0, 0, 0.19) solid;
 }
 
 .drag-item:focus {
-  outline: none;
+  outline:#18162479 solid;
   background-color: white;
-  color: black;
 }
 
 /* Add Button Group */
 .add-btn-group {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .add-btn {
@@ -183,7 +183,7 @@ ul {
   width: fit-content;
   border-radius: 5px;
   color: gray;
-  transition: all 0.3s ease-in;
+  /* transition: all 0.3s ease-in; */
   user-select: none;
 }
 
@@ -198,12 +198,13 @@ ul {
 
 .solid {
   display: none;
+  color:#fff
 }
 
 .solid:hover {
   transition: unset;
   filter: brightness(95%);
-  color: white;
+  color: #fff;
 }
 
 .plus-sign {
@@ -226,7 +227,7 @@ ul {
   width: 100%;
   min-height: 100px;
   height: auto;
-  background-color: white;
+  background-color: lightgray;
   border-radius: 10px;
   margin: 5px auto;
   resize: none;
