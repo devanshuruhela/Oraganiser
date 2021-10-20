@@ -73,7 +73,7 @@ ul {
   position: relative;
   background-color:#fff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.19);
-  border-radius: 10px;
+  border-radius: 5px;
   overflow-x: hidden;
 }
 .drag-column:hover
@@ -114,7 +114,7 @@ ul {
 
 .custom-scroll::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.3);
   margin-right: 5px;
 }
@@ -124,7 +124,7 @@ ul {
 }
 
 .custom-scroll::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -132,7 +132,7 @@ ul {
 .header {
   display: flex;
   justify-content: center;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 10px;
 }
 
@@ -154,7 +154,7 @@ ul {
   padding: 10px;
   height: fit-content;
   background-color: #FFF;
-  border-radius: 10px;
+  border-radius: 5px;
   line-height: 1.5rem;
   letter-spacing: 1px;
   cursor: pointer;
@@ -178,7 +178,7 @@ ul {
 
 .add-btn {
   margin: 10px;
-  padding: 5px 10px;
+  padding: 4px 18px 4px 18px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -190,7 +190,7 @@ ul {
 }
 
 .add-btn:hover {
-  outline: rgba(0, 0, 0, 0.251) dotted;
+  outline: rgba(0, 0, 0, 0.401) solid;
   color: #000;
 }
 
@@ -209,6 +209,10 @@ ul {
   color: #fff;
 }
 
+.info{
+display: inline-block;
+position: relative;
+}
 .plus-sign {
   font-size: 1.5rem;
   margin-right: 5px;
@@ -218,7 +222,7 @@ ul {
 .add-container {
   margin: 10px;
   padding: 5px 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.9);
   min-height: 100px;
   display: none;
@@ -229,7 +233,7 @@ ul {
   min-height: 100px;
   height: auto;
   background-color: lightgray;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 5px auto;
   resize: none;
   color: black;
