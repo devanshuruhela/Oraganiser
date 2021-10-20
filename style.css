@@ -15,7 +15,7 @@ body {
   margin: 0;
   height: 100vh;
   width: 100vw;
-  background-color: #f6f7fb;
+  background-color: #f1f1f1;
   color: white;
   font-family: 'Poppins',
   sans-serif;
@@ -42,7 +42,7 @@ h2 {
   display: flex;
   flex: start;
   z-index: 1;
-  box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.4);
 }
 .icon
 {
@@ -160,12 +160,14 @@ ul {
   cursor: pointer;
   font-weight: bold;
   color: #000;
-  outline: rgba(0, 0, 0, 0.19) solid;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
+  /* outline: rgba(0, 0, 0, 0.19) solid; */
 }
 
 .drag-item:focus {
-  outline:#18162479 solid;
+  outline:none;
   background-color: white;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.30);
 }
 
 /* Add Button Group */
@@ -188,8 +190,8 @@ ul {
 }
 
 .add-btn:hover {
-  background-color: #4584fa49;
-  color: black;
+  outline: rgba(0, 0, 0, 0.251) dotted;
+  color: #000;
 }
 
 .add-btn:active {
@@ -211,7 +213,6 @@ ul {
   font-size: 1.5rem;
   margin-right: 5px;
   position: relative;
-  top: -3px;
 }
 
 .add-container {
