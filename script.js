@@ -204,3 +204,4 @@ function dragEnter(column)
 }
 // Onload 
 updateDOM();
+
