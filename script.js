@@ -51,10 +51,6 @@ function updateSavedColumns() {
 
 // Create DOM Elements for each list item
 function createItemEl(columnEl, column, item, index) {
-  // console.log('columnEl:', columnEl);
-  // console.log('column:', column);
-  // console.log('item:', item);
-  // console.log('index:', index);
   // List Item
   const listEl = document.createElement('li');
   listEl.classList.add('drag-item');
@@ -115,9 +111,7 @@ function updateItem(id , column)
       } else {
         selectedArray[id] = selectedColumnEl[id].textContent;
       }
-      // console.log(selectedArray);
 
-      // console.log(selectedArray);
       updateDOM();
   }
 }
