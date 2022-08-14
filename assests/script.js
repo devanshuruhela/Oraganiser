@@ -32,8 +32,8 @@ function getSavedColumns() {
     onHoldListArray = JSON.parse(localStorage.onHoldItems);
   } else {
     backlogListArray = ['Add Dream company here'];
-    progressListArray = ['Drag or add company here'];
-    completeListArray = ['Drag or add company with Interview invite here'];
+    progressListArray = ['Drag or add company with your application here'];
+    completeListArray = ['Drag or add company with upcoming Interviews here'];
     onHoldListArray = ['woohoo! Drag your offers here'];
   }
 }
