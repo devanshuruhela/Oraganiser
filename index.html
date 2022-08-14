@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organizer</title>
+    <title>Application Tracker</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
-    <link rel="icon" type="image/png" href="#">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
     <link rel="stylesheet" href="style.css">
 </head>
 <body oncontextmenu=" return false">
-    <h1 class="main-title"><i class="fas fa-columns icon"></i>Organizer Board</h1>
+    <h1 class="main-title"><i class="fas fa-columns icon"></i>Job Application Tracker</h1>
     <div class="drag-container">
         <ul class="drag-list">
         <!-- backlog column -->
         <li class="drag-column backlog-column">
             <span class="header">
-                <h2>Backlog</h2>
+                <h2>Wishlist</h2>
             </span>
             <!-- backlog content -->
             <div id="backlog-content" class="custom-scroll">
@@ -30,7 +31,7 @@
             <div class="add-btn-group">
                 <div class="add-btn" onclick="showinputbox(0)">
                     <span class="plus-sign">+</span>
-                    <span>Task</span>
+                    <span>Add a job</span>
                 </div>
                 <div class="add-btn solid" onclick="hideinputbox(0)">
                     <span>Add</span> 
@@ -43,7 +44,7 @@
         </li>
         <li class="drag-column progress-column">
             <span class="header">
-                <h2>Progress</h2>
+                <h2>Applied</h2>
             </span>
             <!-- Progress content -->
             <div id="progress-content" class="custom-scroll">
@@ -59,7 +60,7 @@
             <div class="add-btn-group">
                 <div class="add-btn" onclick="showinputbox(1)">
                     <span class="plus-sign">+</span>
-                    <span>Task</span>
+                    <span>Add a job</span>
                 </div>
                 <div class="add-btn solid" onclick="hideinputbox(1)">
                     <span>Add</span>
@@ -71,7 +72,7 @@
         </li>
         <li class="drag-column complete-column">
             <span class="header">
-                <h2>Complete</h2>
+                <h2>Interview</h2>
             </span>
             <!-- complete content -->
             <div id="complete-content" class="custom-scroll">
@@ -87,7 +88,7 @@
             <div class="add-btn-group">
                 <div class="add-btn" onclick="showinputbox(2)">
                     <span class="plus-sign">+</span>
-                    <span>Task</span>
+                    <span>Add a job</span>
                 </div>
                 <div class="add-btn solid" onclick="hideinputbox(2)">
                     <span>Add</span>
@@ -99,7 +100,7 @@
         </li>
         <li class="drag-column on-hold-column">
             <span class="header">
-                <h2>On hold</h2>
+                <h2>Offer</h2>
             </span>
             <!-- on-hold content -->
             <div id="on-hold-content" class="custom-scroll">
@@ -116,7 +117,7 @@
             <div class="add-btn-group">
                 <div class="add-btn" onclick="showinputbox(3)">
                     <span class="plus-sign">+</span>
-                    <span>Task</span>
+                    <span>Add a job</span>
                 </div>
                 <div class="add-btn solid" onclick="hideinputbox(3)">
                     <span>Add</span>
